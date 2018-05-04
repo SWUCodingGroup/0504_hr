@@ -1,0 +1,33 @@
+/* 백준 no.10039 평균 점수 */
+
+#include <iostream>
+using namespace std;
+
+class student {
+public:
+	int a, b, c, d, e; // score
+	int sum = 0;
+	void avgScore(int);
+};
+
+void student::avgScore(int x) {
+	if (x < 40) x = 40;
+	else x;
+
+	sum += x;
+}
+
+int main() {
+	student stu;
+	cin >> stu.a >> stu.b >> stu.c >> stu.d >> stu.e;
+
+	stu.avgScore(stu.a);
+	stu.avgScore(stu.b);
+	stu.avgScore(stu.c);
+	stu.avgScore(stu.d);
+	stu.avgScore(stu.e);
+
+	cout << (stu.sum) / 5 << endl;
+
+	return 0;
+}
